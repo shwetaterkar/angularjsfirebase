@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "homeawayfromhome-c0bc6"
+  },
+  "targets": {
+    "homeawayfromhome-c0bc6": {
+      "hosting": {
+        "homeawayfromhome": [
+          "homeawayfromhome-c0bc6"
+        ]
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "17744509-50e8-413c-80ba-cfa16bcbd0dd"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,7 +30,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../node_modules/primeicons/primeicons.css",
+              "../node_modules/primeng/resources/themes/arya-purple/theme.css",
+             "../node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -94,9 +100,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../node_modules/primeicons/primeicons.css",
+              "../node_modules/primeng/resources/themes/arya-purple/theme.css",
+              "../node_modules/primeng/resources/primeng.min.css"
+              
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "homeawayfromhome:build:production",
+            "firebaseProject": "homeawayfromhome-c0bc6",
+            "firebaseHostingSite": "homeawayfromhome-c0bc6"
           }
         }
       }

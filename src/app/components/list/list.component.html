@@ -1,0 +1,23 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Apartment name</th>
+            <th>Number of vacancy</th>
+            <th>location</th>
+            <th></th>
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let p of lists">
+            <td> {{p.apartment }}  </td>
+            <td> {{p.vacancy}}  </td>
+            <td> {{p.location}}  </td>
+            <td> <a routerLink="list/{{p.id}}" class="btn btn-dark">Edit</a></td>
+
+        </tr>
+    </tbody>
+</table> 
+

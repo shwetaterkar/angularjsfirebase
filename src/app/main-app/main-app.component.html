@@ -1,0 +1,26 @@
+<p>Hello main-app works!</p>
+
+<div>
+    <input type="text" placeholder="username"  [(ngModel)]="username">
+</div>
+
+<p>typed username: {{ username }}</p>
+
+<button class="btn btn-primary" (click)="createRecord()">Create User</button>
+<button class="btn btn-primary" (click)="updateRecord()">update User</button>
+<button class="btn btn-primary" (click)="deleteRecord()">Delete User</button>
+
+
+<button (click)="resetForm()">Reset Forms</button>
+
+<div class="list">
+  <!-- <ul *ngFor="let user of userRecords">
+   {{user}}
+  </ul> -->
+</div>
+
+<p>Retrived username is {{this.tmp}}</p>
+
+<h1>{{dataRef?.username}}</h1>
+
+
