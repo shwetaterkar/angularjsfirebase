@@ -43,6 +43,7 @@ export class ImageComponent implements OnInit {
     this.isSubmitted = true;
     if(this.formTemplate.valid){
       var filePath = `${formValue.category}/${this.selectedImage.name}_${new Date().getTime()}`;
+      
       const fileRef = this.storage.ref(filePath);
       this.storage.upload(filePath,this.selectedImage).snapshotChanges().pipe(
         finalize(()=>{
@@ -52,8 +53,7 @@ export class ImageComponent implements OnInit {
             this.resetForm();
           })
         })
-      ).
-      subscribe(); 
+      ).subscribe(); 
       
     }
   }
