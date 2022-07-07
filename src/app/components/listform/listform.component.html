@@ -1,16 +1,45 @@
 <form #listForm="ngForm" (ngSubmit) ="save(listForm)">
     <div class="form-group">
-        <label for = "apartment">Apartment Name</label>
-        <input type="text" name="apartment" id="apartment" class="form-control" [(ngModel)]="list.apartment">
+        <label for = "apartment">Title</label>
+        <input type="text" name="title" id="title" class="form-control" [(ngModel)]="list.title">
     </div>
     <div class="form-group">
-        <label for = "vacancy">Number of vacancy</label>
+        <label for = "Property type">Property type(flat/house/studio/townhouse)</label>
+        <input type="text" name="property_type" id="property_type" class="form-control" [(ngModel)]="list.property_type">
+    </div>
+    <div class="form-group">
+        <label for = "Number of bedrooms">Number of bedrooms</label>
+        <input type="text" name="bedrooms" id="bedrooms" class="form-control" [(ngModel)]="list.bedrooms">
+    </div>
+    <div class="form-group">
+        <label for = "Number of bathrooms">Number of bathrooms</label>
+        <input type="text" name="bathrooms" id="bathrooms" class="form-control" [(ngModel)]="list.bathrooms">
+    </div>
+    <div class="form-group">
+        <label for = "Property address">Property address</label>
+        <input type="text" name="property_address" id="property_address" class="form-control" [(ngModel)]="list.property_address">
+    </div>
+    <div class="form-group">
+        <label for = "Description">Description</label>
+        <input type="text" name="description" id="description" class="form-control" [(ngModel)]="list.description">
+    </div>
+    <div class="form-group">
+        <label for = "Amenities">Amenities(Balcony, basement, parking, swimming pool, gym)</label>
+        <input type="text" name="amenities" id="amenities" class="form-control" [(ngModel)]="list.amenities">
+    </div>
+    <div class="form-group">
+        <label for = "Number of vacancy">Number of vacancy</label>
         <input type="text" name="vacancy" id="vacancy" class="form-control" [(ngModel)]="list.vacancy">
     </div>
+
     <div class="form-group">
-        <label for = "location">Apartment location</label>
-        <input type="text" name="location" id="location" class="form-control" [(ngModel)]="list.location">
+        <label for = "File upload">Upload new images:    </label>
+        <input type="file" (change)="onFileSelected($event)">
+        <button type="button" (click)="onUpload()">Upload</button>
     </div>
+    
+    
+
     <button type="submit" class="btn btn-primary">Save</button>
     <a (click)="update(this.listForm)" class="btn btn-danger">Update</a>
 

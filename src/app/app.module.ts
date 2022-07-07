@@ -21,6 +21,9 @@ import {CrudService} from './service/crud.service';
 import { NavComponent } from './components/nav/nav.component';
 import { ListComponent } from './components/list/list.component';
 import { ListformComponent } from './components/listform/listform.component';
+import { ImagesComponent } from './images/images.component';
+import { ImageComponent } from './images/image/image.component';
+import { ImageListComponent } from './images/image-list/image-list.component';
 
 
 
@@ -31,7 +34,10 @@ import { ListformComponent } from './components/listform/listform.component';
     MainAppComponent,
     NavComponent,
     ListComponent,
-    ListformComponent
+    ListformComponent,
+    ImagesComponent,
+    ImageComponent,
+    ImageListComponent
   ],
   imports: [
     BrowserModule,

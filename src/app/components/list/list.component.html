@@ -1,9 +1,15 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Apartment name</th>
-            <th>Number of vacancy</th>
-            <th>location</th>
+            <th>Title</th>
+            <th>Property type</th>
+            <th>Number of bedrooms</th>
+            <th>Number of bathrooms</th>
+            <th>Property address</th>
+            <th>Description</th>
+            <th>Features</th>
+            <th>Amenities</th>
+            <th>vacancy</th>
             <th></th>
 
 
@@ -12,9 +18,15 @@
 
     <tbody>
         <tr *ngFor="let p of lists">
-            <td> {{p.apartment }}  </td>
+            <td> {{p.title }}  </td>
+            <td> {{p.property_type}}  </td>
+            <td> {{p.bedrooms}}  </td>
+            <td> {{p.bathrooms }}  </td>
+            <td> {{p.property_address}}  </td>
+            <td> {{p.description }}  </td>
+            <td> {{p.amenities}}  </td>
             <td> {{p.vacancy}}  </td>
-            <td> {{p.location}}  </td>
+
             <td> <a routerLink="list/{{p.id}}" class="btn btn-dark">Edit</a></td>
 
         </tr>
